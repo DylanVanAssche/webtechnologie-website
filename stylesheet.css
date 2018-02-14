@@ -1,0 +1,178 @@
+:root { /*CSS color scheme variables*/
+	--color-red: #9a1b29;
+	--color-brown: #be906c;
+	--color-white: #e8e6e9;
+	--color-grey: #757881;
+	--color-black: #222222
+}
+
+* { /*Normalise margins, paddings, ...*/
+  margin: 0;
+  padding: 0;
+}
+
+body { /*Background*/
+	background-color: var(--color-red);
+}
+
+section { /*Content default*/
+	width: 82%;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	margin-left: 4%;
+	margin-right: 4%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	padding-right: 5%;
+	overflow: auto; /*Follow the size of floating images*/
+}
+
+h1, h2, h3, h4, h5, h6 { /*All headings need to follow the margins too*/
+	color: var(--color-red);
+}
+
+h1 {
+	font-size: 200%;
+}
+
+p, q, form, address {
+	padding: 0.5%;
+	font-size: 110%;
+}
+
+q {
+	font-style: italic;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/*Enforce margins for form element*/
+input[type="radio"], input[type="checkbox"], input[type="text"], select, legend, textarea {
+	margin: 0.75%;
+}
+
+/*Add padding to the form input element*/
+select, input[type="text"] {
+	padding: 0.5%;
+	display: inline-block;
+}
+
+input[type="text"] {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*Buttons forms*/
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: var(--color-black);
+    border: none;
+    color: var(--color-white);
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
+	background-color: var(--color-red);
+}
+
+/*Use full available width for textarea, not columns*/
+textarea {
+	width: 98.5%;
+}
+
+a { /*Force the A tag to use all the current colors, fonts, ...*/
+	color: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+}
+
+/*Picture 1 index.php*/
+#img-1 {
+	width: 35%;
+	float:right;
+}
+
+/*Header picture*/
+#img-header {
+	width: 100%; /*Display full width as block*/
+	display: block;
+}
+
+#footer {
+	color: var(--color-white);
+	padding: 2%;
+	font-size: 90%;
+}
+
+/*Wrapper to avoid overflow when space is too small. Auto resizes the 2nd
+DIV automatically*/
+.form-wrapper {
+	overflow: auto;
+}
+
+/*Floating the 1st DIV with a certain width*/
+.form-check {
+	padding-left: 0.5%;
+	width: 7%;
+	float: left;
+}
+
+/*The 2nd DIV will come next to the 1st DIV due the floating parameter,
+text-align to align all the fields due a different size*/
+.form-field {
+	width: 20%;
+	margin-left: 7%;
+	text-align: right;
+}
+
+/*W3C DIV centering advice:
+https://www.w3.org/Style/Examples/007/center.en.html*/
+.center {
+	margin-left: auto;
+    margin-right: auto;
+	width: 50%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.bold { /*Bold text*/
+	font-weight: bold;
+}
+
+.hidden-ul { /*Unordered list without bullets*/
+	list-style-type: none;
+}
+
+.form-buttons {
+	padding-top: 1%;
+}
+
+.menu-background { /*Background for menu*/
+	width: 100%;
+	background-color: var(--color-black);
+}
+
+.menu-ul {
+    overflow: hidden;
+    background-color: inherit;
+}
+
+.menu-li {
+    float: left;
+}
+
+.menu-li a {
+    display: block;
+    background-color: inherit;
+	color: var(--color-white);
+    text-align: center;
+    padding: 20px 50px;
+}
+
+.menu-li a:hover {
+    background-color: var(--color-red);
+}
