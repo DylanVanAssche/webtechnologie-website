@@ -1,4 +1,4 @@
-<img id="img-header" src="logo.jpg" alt="Logo">
+<img id="img-header" src="./images/logo.jpg" alt="Logo">
 <div class="menu-background">
 	<ul class="menu-ul hidden-ul center">
 		<li class="menu-li"><a href="index.php">Home</a></li>
