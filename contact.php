@@ -14,7 +14,7 @@
         <p>
             U kan ons steeds contacteren via het onderstaande formulier. We streven er steeds naar u vraag zo snel mogelijk te behandelen.
         </p>
-		 <form action="/contact.php">
+		 <form action="./contact.php" onsubmit="return validateForm();" id="contact-form">
 			<fieldset>
 				<legend>Aanspreking</legend>
 				<input type="radio" name="gender" value="male" checked>Dhr.<br>
@@ -91,5 +91,37 @@
 			</div>
 		</form>
 	  </section>
+	  <script>
+		// HTML5: required doet exact hetzelfde
+		var form = document.getElementById("contact-form");
+		function validateForm() {
+			var name = form.elements["name"].value;
+			if(name == "") {
+				alert("Naam is verplicht!");
+				return false;
+			}
+			
+			if(form.elements["telCheck"].checked && form.elements["tel"].value == "") {
+				alert("Telefoon is verplicht!");
+				return false;
+			}
+			
+			if(form.elements["emailCheck"].checked && form.elements["email"].value == "") {
+				alert("Email is verplicht!");
+				return false;
+			}
+			
+			var ingevuldPost = form.elements["straat"].value == "" && form.elements["postcode"].value == "" && form.elements["gemeente"].value == "";
+			if(form.elements["postCheck"].checked && ingevuldPost) {
+				alert("Adres is verplicht!");
+				return false;
+			}
+			
+			if(form.elements["message"].value == "") {
+				alert("Wat is u vraag?");
+				return false;
+			}
+		}
+		</script>
   </body>
 </html>

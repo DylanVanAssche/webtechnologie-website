@@ -36,9 +36,18 @@ h1 {
 	font-size: 200%;
 }
 
-p, q, form, address {
+p, q, form, address, p:ul, table {
 	padding: 0.5%;
 	font-size: 110%;
+}
+
+table {
+	width: 100%;
+}
+
+table, th, td {
+   border: 1px solid black;
+   text-align: center;
 }
 
 q {

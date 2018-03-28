@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 begin_html = """content-type: text/html
 
 <!DOCTYPE html>
@@ -11,6 +11,8 @@ begin_html = """content-type: text/html
 <body>
 <!--Header-->
 """
+print(begin_html)
+#Print HTML headers
 
 einde_html = """</body></html>"""
 
@@ -32,9 +34,6 @@ intro_section = """Beste klant, om onze dienstverlening te verbeteren hadden we 
 
 
 enquete_vraag_entry = """<td>{}</td>"""
-
-#Print HTML headers
-print(begin_html)
 
 #Print header.php as body
 with open("./header.php") as header:

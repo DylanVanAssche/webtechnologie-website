@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 import sys
 import os
 
@@ -40,7 +40,6 @@ for line in sys.stdin:
 
 for item in post:
 	entry = ""
-	print(item)
 	for data in item:
 		key, value = data.split("=")
 		entry =  "{}:{}".format(entry, value)

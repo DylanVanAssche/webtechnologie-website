@@ -2,7 +2,8 @@
 <html lang="nl">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <script src="./js/html5.js"> </script>
+  <script src="./js/html5.js"></script>
+  <script src="./js/slideshow.js"></script>
   <link href="./css/stylesheet.css" rel="stylesheet" type="text/css">
        <title>DDT ok&eacute; cars</title>
 </head>
@@ -14,7 +15,7 @@
     <section>
 		<h1>Welkom bij DDT ok&eacute; cars</h1>
         <p>
-            <img src="./images/ddt.jpg" alt="DDT" id="img-1">
+            <img src="./images/ddt-1.jpg" alt="DDT" id="img-1">
             <span class="bold">Bij de garage DDT ok&eacute; cars zit u steeds aan de kant van de winaars!</span>
             <address>
                 <ul class="hidden-ul">

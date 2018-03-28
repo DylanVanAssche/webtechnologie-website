@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 import sys
 
 begin_html = """content-type: text/html
