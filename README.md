@@ -1,7 +1,7 @@
 # webtechnologie-website
 
 Website for the course Webtechnologie by Joost Vennekens (Campus De Nayer, KU Leuven).
-This website is a demo for several languages for developing websites.
+This website is a demo for several languages to develop websites.
 
 ## Languages
 
