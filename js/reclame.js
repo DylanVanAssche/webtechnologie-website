@@ -1,23 +1,23 @@
 var reclame = ["50% korting op alle opties deze week!", "Gratis ruitenwissers bij een onderhoud!", "3 jaar extra garantie bij aankoop van een nieuwe wagen!"] // indien AJAX faalt
 
 function haalReclameOp() {
-	http = new XMLHttpRequest();
-	http.open("GET", "data/reclame.xml");
-	http.onreadystatechange = parse;
-	http.send(null);
-}
+	  http = new XMLHttpRequest();
+	  http.open("GET", "data/reclame.xml");
+	  http.onreadystatechange = parse;
+	  http.send(null);
+	}
 
 function parse() {
-	if (http.readyState == 4) {
-		var xml = http.responseXML;
-		var r = xml.getElementsByTagName("reclame")[0].getElementsByTagName("aanbieding");
-		reclame = []; // maak leeg
-		for(var i=0; i < r.length; i++) {
-			// XML parsen kan ook via de DOM tree
-			reclame.push(r[i].getElementsByTagName("boodschap")[0].innerHTML);
-		}
-		console.log("Ontvangen via AJAX: " + reclame);
+  if (http.readyState == 4) {
+	var xml = http.responseXML;
+	var r = xml.getElementsByTagName("reclame")[0].getElementsByTagName("aanbieding");
+	reclame = []; // maak leeg
+	for(var i=0; i < r.length; i++) {
+		// XML parsen kan ook via de DOM tree
+		reclame.push(r[i].getElementsByTagName("boodschap")[0].innerHTML);
 	}
+	console.log("Ontvangen via AJAX: " + reclame);
+  }
 }
 
 function toonWillekeurigeReclame() {

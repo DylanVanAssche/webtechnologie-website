@@ -33,6 +33,7 @@ with open("./header.php") as header:
 print(begin_section)
 
 print("<h1>Resultaten enquete</h1>")
+print("<h2>Simpele grafiek</h2>")
 
 #Read the enquete.txt file
 with open("./enquete/enquete.txt", "r") as enquete:
@@ -61,6 +62,10 @@ for count, q in enumerate(questions):
 		print(enquete_vraag_entry.format("""<div style="width:{}px; background-color:{}; text-align:center">{}</div>""".format(2.5*(values[i]+20), colors[i], values[i])))
 	print("</tr>")
 print("</table>")
+
+#Print bargraph.php as body
+with open("./bargraph.php") as bargraph:
+    print(bargraph.read())
 
 #Close section
 print(einde_section)

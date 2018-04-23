@@ -10,7 +10,8 @@
 		<!--Header-->
 		<?php include("header.php")?>
 		<section>
-		<h1>Contact</h1>
+		<h1>Contacteer ons</h1>
+		<h2>Formulier</h2>
         <p>
             U kan ons steeds contacteren via het onderstaande formulier. We streven er steeds naar u vraag zo snel mogelijk te behandelen.
         </p>
@@ -90,6 +91,11 @@
 				<input type="reset" value="Reset">
 			</div>
 		</form>
+		
+		<h2>Locatie</h2>
+		<div class="mapWrapper">
+			<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=4.419250488281251%2C51.14209422481467%2C4.70592498779297%2C51.24117830217582&amp;layer=mapnik&amp;marker=51.19166289516307%2C4.562587738037109" ></iframe>
+		</div>
 	  </section>
 	  <script>
 		// HTML5: required doet exact hetzelfde
